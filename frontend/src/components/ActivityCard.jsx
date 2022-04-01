@@ -27,7 +27,7 @@ function ActivityCard(props) {
         <div className="card-body">
           <h3>{timeframes[timePeriodSelected].current} hrs</h3>
           <p className="previous-time-text">
-            Last Week - {timeframes.weekly.previous}
+            Last Week - {timeframes[timePeriodSelected].previous}
           </p>
         </div>
       </div>
