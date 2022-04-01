@@ -12,6 +12,7 @@
   --exerciseBg: hsl(145, 58%, 55%);
   --socialBg: hsl(264, 64%, 52%);
   --selfCareBg: hsl(43, 84%, 65%);
+  --activeCardColor: #34397b;
 }
 
 body {
@@ -73,8 +74,13 @@ ul {
 
 .card-main {
   position: relative;
+  cursor: pointer;
   z-index: 4;
   background-color: var(--cardBodyColor);
+}
+
+.card-main:hover {
+  background-color: var(--activeCardColor);
 }
 
 .card-body h3 {
@@ -169,6 +175,14 @@ ul.profile-time-period-list li.active {
 
 .self-care-bg {
   background-color: var(--selfCareBg);
+}
+
+.ellipsis {
+  cursor: pointer;
+}
+
+.ellipsis:hover {
+  filter: brightness(1.5);
 }
 
 @media (max-width: 700px) {

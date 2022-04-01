@@ -1,6 +1,7 @@
 import React from "react";
 
-function ProfileCard() {
+function ProfileCard(props) {
+  const { timePeriodSelected, setTimePeriodSelected } = props;
   return (
     <div className="profile-card card">
       <header className="profile-header">
@@ -12,9 +13,24 @@ function ProfileCard() {
       </header>
       <footer className="profile-footer">
         <ul className="profile-time-period-list">
-          <li>Daily</li>
-          <li className="active">Weekly</li>
-          <li>Monthly</li>
+          <li
+            className={timePeriodSelected === "daily" ? "active" : ""}
+            onClick={() => setTimePeriodSelected("daily")}
+          >
+            Daily
+          </li>
+          <li
+            className={timePeriodSelected === "weekly" ? "active" : ""}
+            onClick={() => setTimePeriodSelected("weekly")}
+          >
+            Weekly
+          </li>
+          <li
+            className={timePeriodSelected === "monthly" ? "active" : ""}
+            onClick={() => setTimePeriodSelected("monthly")}
+          >
+            Monthly
+          </li>
         </ul>
       </footer>
     </div>
