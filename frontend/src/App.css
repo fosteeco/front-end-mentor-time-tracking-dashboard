@@ -1,0 +1,165 @@
+:root {
+  --mainBg: #0d1323;
+  --white: #fff;
+  --cardBodyColor: #1d204b;
+  --profileBg: #5746ea;
+  --cardBorderRadius: 10px;
+  --inactiveTextColor: #7074b1;
+  --testCardImageColor: #7235d1;
+  --workBg: hsl(15, 100%, 70%);
+  --playBg: hsl(195, 74%, 62%);
+  --studyBg: hsl(348, 100%, 68%);
+  --exerciseBg: hsl(145, 58%, 55%);
+  --socialBg: hsl(264, 64%, 52%);
+  --selfCareBg: hsl(43, 84%, 65%);
+}
+
+body {
+  background-color: var(--mainBg);
+  color: var(--white);
+  font-family: 'Rubik';
+  border: 0;
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.time-profile-container {
+  display: grid;
+  min-width: 1000px;
+  gap: 20px;
+  grid-template-columns: 20% 80%;
+}
+
+.activities-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.activity-card {
+}
+
+.card {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-main {
+  position: relative;
+  z-index: 4;
+  background-color: var(--cardBodyColor);
+}
+
+.card-body h3 {
+  font-size: 3rem;
+  margin: 30px 0;
+}
+
+.profile-card {
+  padding: 0;
+  margin-top: 10px;
+  background-color: var(--cardBodyColor);
+}
+
+.profile-header {
+  background-color: var(--profileBg);
+  border-radius: var(--cardBorderRadius);
+  padding: 10px;
+}
+
+img.profile-image {
+  width: 60px;
+  border: 2px solid var(--white);
+  border-radius: 100%;
+}
+
+.card-image-container {
+  display: flex;
+  position: relative;
+  height: 45px;
+  border-top-left-radius: var(--cardBorderRadius);
+  border-top-right-radius: var(--cardBorderRadius);
+  transform: translateY(10px);
+  background-color: var(--testCardImageColor);
+  z-index: -2;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+img.card-image {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  z-index: 1;
+  width: 80px;
+}
+
+.previous-time-text {
+  color: var(--inactiveTextColor);
+}
+
+ul.profile-time-period-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+ul.profile-time-period-list li {
+  cursor: pointer;
+  color: var(--inactiveTextColor);
+}
+
+ul.profile-time-period-list li:hover {
+  color: var(--white);
+}
+
+ul.profile-time-period-list li.active {
+  color: var(--white);
+}
+
+.work-bg {
+  background-color: var(--workBg);
+}
+
+.play-bg {
+  background-color: var(--playBg);
+}
+
+.study-bg {
+  background-color: var(--studyBg);
+}
+
+.exercise-bg {
+  background-color: var(--exerciseBg);
+}
+
+.social-bg {
+  background-color: var(--socialBg);
+}
+
+.self-care-bg {
+  background-color: var(--selfCareBg);
+}
