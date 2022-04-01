@@ -5,8 +5,10 @@ function ProfileCard() {
     <div className="profile-card card">
       <header className="profile-header">
         <img src="/images/image-jeremy.png" alt="" className="profile-image" />
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
+        <div className="profile-info">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
       </header>
       <footer className="profile-footer">
         <ul className="profile-time-period-list">

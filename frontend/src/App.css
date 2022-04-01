@@ -17,6 +17,7 @@
 body {
   background-color: var(--mainBg);
   color: var(--white);
+  width: 100vw;
   font-family: 'Rubik';
   border: 0;
   margin: 0;
@@ -24,8 +25,11 @@ body {
 
 main {
   min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
   place-items: center;
+  padding: 20px;
 }
 
 ul {
@@ -36,15 +40,16 @@ ul {
 
 .time-profile-container {
   display: grid;
-  min-width: 1000px;
-  gap: 20px;
+  min-width: 100%;
   grid-template-columns: 20% 80%;
 }
 
 .activities-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 0 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
+  justify-content: space-around;
 }
 
 .activity-card {
@@ -79,13 +84,14 @@ ul {
 
 .profile-card {
   padding: 0;
-  margin-top: 10px;
+  height: 100%;
   background-color: var(--cardBodyColor);
 }
 
 .profile-header {
   background-color: var(--profileBg);
   border-radius: var(--cardBorderRadius);
+  height: 60%;
   padding: 10px;
 }
 
@@ -122,6 +128,7 @@ img.card-image {
 
 ul.profile-time-period-list {
   display: grid;
+  padding: 10px;
   gap: 10px;
   margin-top: 10px;
   padding-left: 20px;
@@ -162,4 +169,35 @@ ul.profile-time-period-list li.active {
 
 .self-care-bg {
   background-color: var(--selfCareBg);
+}
+
+@media (max-width: 700px) {
+  .time-profile-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .activities-container {
+    grid-template-columns: 1fr;
+    margin: 0;
+    gap: 0;
+  }
+  .profile-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    height: auto;
+  }
+  .profile-header .profile-info > * {
+    margin: 0;
+  }
+  .profile-header .profile-info p {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+  }
+  .profile-header .profile-info h1 {
+    font-size: 1rem;
+  }
+  ul.profile-time-period-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
