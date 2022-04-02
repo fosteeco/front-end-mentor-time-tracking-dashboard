@@ -7,14 +7,12 @@ function ActivityCard(props) {
   const titleBgClass = fileNameTitle + "-bg";
 
   return (
-    <div className="activity-card">
-      <div className={"card-image-container " + titleBgClass}>
-        <img
-          src={`images/icon-${fileNameTitle}.svg`}
-          alt=""
-          className="card-image"
-        />
-      </div>
+    <div className={"activity-card card-image-container " + titleBgClass}>
+      <img
+        src={`images/icon-${fileNameTitle}.svg`}
+        alt=""
+        className="card-image"
+      />
       <div className="card-main card">
         <header className="card-header">
           <h2>{title}</h2>

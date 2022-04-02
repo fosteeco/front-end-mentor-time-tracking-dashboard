@@ -53,11 +53,8 @@ ul {
   justify-content: space-around;
 }
 
-.activity-card {
-}
-
 .card {
-  border-radius: 10px;
+  border-radius: var(--cardBorderRadius);
   padding: 10px;
 }
 
@@ -75,7 +72,6 @@ ul {
 .card-main {
   position: relative;
   cursor: pointer;
-  z-index: 4;
   background-color: var(--cardBodyColor);
 }
 
@@ -108,24 +104,19 @@ img.profile-image {
 }
 
 .card-image-container {
-  display: flex;
   position: relative;
-  height: 45px;
-  border-top-left-radius: var(--cardBorderRadius);
-  border-top-right-radius: var(--cardBorderRadius);
-  transform: translateY(10px);
+  border-radius: var(--cardBorderRadius);
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  padding-top: 40px;
   background-color: var(--testCardImageColor);
-  z-index: -2;
-  justify-content: flex-end;
-  overflow: hidden;
 }
 
 img.card-image {
   position: absolute;
-  right: 0;
-  top: -10px;
-  z-index: 1;
-  width: 80px;
+  right: 10px;
+  top: 0px;
+  width: 75px;
 }
 
 .previous-time-text {
@@ -193,7 +184,7 @@ ul.profile-time-period-list li.active {
   .activities-container {
     grid-template-columns: 1fr;
     margin: 0;
-    gap: 0;
+    gap: 15px;
   }
   .profile-header {
     display: grid;
