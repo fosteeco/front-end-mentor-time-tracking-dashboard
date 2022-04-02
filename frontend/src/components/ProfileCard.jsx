@@ -5,7 +5,7 @@ function ProfileCard(props) {
   return (
     <div className="profile-card card">
       <header className="profile-header">
-        <img src="/images/image-jeremy.png" alt="" className="profile-image" />
+        <img src="images/image-jeremy.png" alt="" className="profile-image" />
         <div className="profile-info">
           <p>Report for</p>
           <h1>Jeremy Robson</h1>

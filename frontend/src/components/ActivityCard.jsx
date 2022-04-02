@@ -17,7 +17,7 @@ function ActivityCard(props) {
         <header className="card-header">
           <h2>{title}</h2>
           <img
-            src="/images/icon-ellipsis.svg"
+            src="images/icon-ellipsis.svg"
             alt="ellipses"
             className="ellipsis"
           />
