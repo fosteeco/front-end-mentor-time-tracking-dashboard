@@ -6,6 +6,23 @@ function ActivityCard(props) {
   const fileNameTitle = title.replace(/\s/g, "-").toLowerCase();
   const titleBgClass = fileNameTitle + "-bg";
 
+  const previousPeriodTerm = () => {
+    switch (timePeriodSelected) {
+      case "daily":
+        return "Day";
+        break;
+      case "weekly":
+        return "Week";
+        break;
+      case "monthly":
+        return "Month";
+        break;
+      default:
+        return "No option available";
+        break;
+    }
+  };
+
   return (
     <div className={"activity-card card-image-container " + titleBgClass}>
       <img
@@ -25,7 +42,8 @@ function ActivityCard(props) {
         <div className="card-body">
           <h3>{timeframes[timePeriodSelected].current} hrs</h3>
           <p className="previous-time-text">
-            Last Week - {timeframes[timePeriodSelected].previous}
+            Last {previousPeriodTerm()}-{" "}
+            {timeframes[timePeriodSelected].previous}
           </p>
         </div>
       </div>

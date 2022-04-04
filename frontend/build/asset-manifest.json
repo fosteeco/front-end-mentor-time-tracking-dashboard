@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/front-end-mentor-time-tracking-dashboard/static/css/main.28b599c6.css",
-    "main.js": "/front-end-mentor-time-tracking-dashboard/static/js/main.ff312e0a.js",
+    "main.js": "/front-end-mentor-time-tracking-dashboard/static/js/main.dfe13889.js",
     "index.html": "/front-end-mentor-time-tracking-dashboard/index.html",
     "main.28b599c6.css.map": "/front-end-mentor-time-tracking-dashboard/static/css/main.28b599c6.css.map",
-    "main.ff312e0a.js.map": "/front-end-mentor-time-tracking-dashboard/static/js/main.ff312e0a.js.map"
+    "main.dfe13889.js.map": "/front-end-mentor-time-tracking-dashboard/static/js/main.dfe13889.js.map"
   },
   "entrypoints": [
     "static/css/main.28b599c6.css",
-    "static/js/main.ff312e0a.js"
+    "static/js/main.dfe13889.js"
   ]
 }
